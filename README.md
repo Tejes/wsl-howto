@@ -1,10 +1,10 @@
-# Windows Subsystem for Linux
+# C programozás Windows Subsystem for Linux segítségével
 
 Ez a leírás röviden végigvezet a WSL beüzemelésén, a GCC fordító telepítésén és egy példa kód fordításán, futtatásán.
 
 ## Mi az a WSL?
 
-https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
+A [Windows Subsystem for Linux][wsl_wiki] segítségével linuxos programokat futtathatunk windowsos gépünkön. Amennyiben Windows 10-es géped van és nem akarsz dual boottal, vagy virtuális gép telepítésével bajlódni, ez a legegyszerűbb módja annak, hogy a kabinethez hasonló környezetben a GCC fordítóval dolgozz.
 
 ## Követelmények
 
@@ -122,3 +122,4 @@ Majd a futtatás:
 [npp_website]: https://notepad-plus-plus.org/
 [sublime_website]: https://www.sublimetext.com/
 [atom_website]: https://atom.io/
+[wsl_wiki]: https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
