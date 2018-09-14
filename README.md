@@ -110,14 +110,14 @@ Majd a futtatás:
 
 ![Fordul és fut!][compile_and_run]
 
-[start_powershell]: https://i.imgur.com/AF5nM2G.png
-[ms_store_debian]: https://i.imgur.com/os787RN.png
-[debian_after_install]: https://i.imgur.com/itzXEdn.png
-[apt_update]: https://i.imgur.com/snt7aak.png
-[gcc_installing]: https://i.imgur.com/7eS2KDx.png
-[mnt_contents]: https://i.imgur.com/qmLefis.png
-[code_npp]: https://i.imgur.com/BK86y8M.png
-[compile_and_run]: https://i.imgur.com/zIpYLar.png
+[start_powershell]: img/Screenshot_6.png
+[ms_store_debian]: img/Screenshot_7.png
+[debian_after_install]: img/Screenshot_9.png
+[apt_update]: img/Screenshot_10.png
+[gcc_installing]: img/Screenshot_11.png
+[mnt_contents]: img/Screenshot_12.png
+[code_npp]: img/Screenshot_14.png
+[compile_and_run]: img/Screenshot_13.png
 
 [linux-distro]: https://hu.wikipedia.org/wiki/Linux-disztrib%C3%BAci%C3%B3
 [sudo_wiki]: https://hu.wikipedia.org/wiki/Sudo
