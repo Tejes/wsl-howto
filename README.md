@@ -94,6 +94,8 @@ int main() {
 }
 ```
 
+![Kód Notepad++-ban][code_npp]
+
 Mentsük el és váltsunk vissza a terminálunkra. Adjuk ki újra az `ls` parancsot és a fájl meg kell hogy jelenjen. Ha nem így történt, ellenőrizzük az elérési utakat, biztos mindkét helyen ugyanott vagyunk-e.
 
 Jöhet a fordítás, melegen ajánlom a `-Wall` kapcsoló használatát:
@@ -109,16 +111,18 @@ Majd a futtatás:
 ![Fordul és fut!][compile_and_run]
 
 [start_powershell]: https://i.imgur.com/AF5nM2G.png
-[linux-distro]: https://hu.wikipedia.org/wiki/Linux-disztrib%C3%BAci%C3%B3
 [ms_store_debian]: https://i.imgur.com/os787RN.png
 [debian_after_install]: https://i.imgur.com/itzXEdn.png
-[sudo_wiki]: https://hu.wikipedia.org/wiki/Sudo
 [apt_update]: https://i.imgur.com/snt7aak.png
-[apt_wiki]: https://hu.wikipedia.org/wiki/Advanced_Packaging_Tool
-[package_manager_wiki]: https://en.wikipedia.org/wiki/Package_manager
 [gcc_installing]: https://i.imgur.com/7eS2KDx.png
 [mnt_contents]: https://i.imgur.com/qmLefis.png
+[code_npp]: https://i.imgur.com/BK86y8M.png
 [compile_and_run]: https://i.imgur.com/zIpYLar.png
+
+[linux-distro]: https://hu.wikipedia.org/wiki/Linux-disztrib%C3%BAci%C3%B3
+[sudo_wiki]: https://hu.wikipedia.org/wiki/Sudo
+[apt_wiki]: https://hu.wikipedia.org/wiki/Advanced_Packaging_Tool
+[package_manager_wiki]: https://en.wikipedia.org/wiki/Package_manager
 [npp_website]: https://notepad-plus-plus.org/
 [sublime_website]: https://www.sublimetext.com/
 [atom_website]: https://atom.io/
