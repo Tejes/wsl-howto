@@ -54,7 +54,7 @@ Most már jöhet a tényleges telepítés:
 
     sudo apt install gcc
     
-Az [APT][apt_wiki] ájékoztat, hogy pontosan milyen [csomagokat][package_manager_wiki] (programokat, programkönyvtárakat) fog telepíteni, és az mennyi helyet foglal majd a gépünkön. Írjunk be egy `y`-t és enter. 
+Az [APT][apt_wiki] ájékoztat, hogy pontosan milyen [csomagokat][package_manager_wiki] (programokat, programkönyvtárakat) fog telepíteni, és az mennyi helyet foglal majd a gépünkön. Üssünk be egy <kbd>y</kbd>-t és enter. 
 
 ![Települ a gcc][gcc_installing]
 
@@ -72,7 +72,7 @@ Emlékezzünk vissza a terminálos fájlkezelésénél tanult alapparancsokra:
 * `ls`: list - listázás, kiírja az aktuális könyvtár tartalmát.
 * `mkdir`: make directory - könytvárlétrehozás, értelem szerűen.
 * `rmdir`: remove directory - *üres* könyvtár törlése.
-* `rm`: remove - fájl törlése. `-rf` kapcsolóval viszont egy komplett mappát töröl a tartalmával együtt. A művelet *nem visszavonható*, a törölt állományok nem kerülnek a lomtárba (linuxon alapból nincs is lomtár)!
+* `rm`: remove - fájl törlése. `-rf` kapcsolóval viszont egy komplett mappát töröl a tartalmával együtt. A művelet **nem visszavonható**, a törölt állományok nem kerülnek a lomtárba (linuxon alapból nincs is lomtár)!
 
 Alapból a `/home/felhasznalonev` könyvtárunkban vagyunk, ami üres. Itt is nyugodtan dolgozhatunk, azonban ennek a tartalmát kívülről, a Windows felületéről nehézkes elérni, ezért javaslom, hogy inkább használjunk kinti mappát. Lépjünk a `/mnt` mappába és írassuk ki a tartalmát részletesen az `ls -l` paranccsal!
 
@@ -96,9 +96,15 @@ int main() {
 
 ![Kód Notepad++-ban][code_npp]
 
-Mentsük el és váltsunk vissza a terminálunkra. Adjuk ki újra az `ls` parancsot és a fájl meg kell hogy jelenjen. Ha nem így történt, ellenőrizzük az elérési utakat, biztos mindkét helyen ugyanott vagyunk-e.
+Mentsük el, lehetőleg [Unix sortöréssel][newline_wiki] és [UTF-8 karakterkódolással][utf8_wiki]. Váltsunk vissza a terminálunkra. Adjuk ki újra az `ls` parancsot és a fájl meg kell hogy jelenjen. Ha nem így történt, ellenőrizzük az elérési utakat, biztos mindkét helyen ugyanott vagyunk-e.
 
-Jöhet a fordítás, melegen ajánlom a `-Wall` kapcsoló használatát:
+> **Megjegyzés** A sortörés vagy új sor karakter operációs rendszertől függ. Manapság két elterjedt ábrázolása van: a Unix féle `\n` és a Windows féle `\r\n`. Előbbit a legtöbb rendszer megérti, ezért általánosabbnak tekinthetjük, utóbbiban az extra `\r` megzavarhatja azokat az alkalmazásokat, akik nem számítanak rá (pl. furcsa dolgokat írnak ki a konzolra, vagy elszámolják egy szöveg hosszát). Amikor Windowson dolgozunk a legtöbb szerkesztő alapból a windowsos sortörést fogja használni, ez azonban általában átállítható.
+
+> **Megjegyzés** A [karakterkódolás][codepage_wiki] azt adja meg, hogy mely betűket, karaktereket mely egész számmal reprezentáljuk a számítógép memóriájában, illetve a háttértárakon. Például a nagy `A` betű kódja szinte univerzálisan 65. Az egyszerűbb karakterekkel, mint az írásjelek, angol ABC betűi, számok nem is szokott gond lenni, ezek elférnek a 7 bites ASCII táblában is, ami gyakorlatilag az összes többi kódolás alapját képezi.
+> A gond a többi nyelv karaktereivel kezdődik, pl a magyar ékezetes betűk, vagy akár a teljesen különböző ciril, arab, héber, kínai, japán, koreai, stb. ábécék. Ezek a nyelvek tradícionálisan mind-mind különböző kódtáblát használtak, általában az ASCII-t kibővítre 8 bitre, ezáltal további 128 karaktert hozzáadva. A mai Windowsok is még midig egy ilyen nemzeti karakterkészletet használnak, magyar nyelv esetén a Windows-1250-est. Ha egy fájlt így mentünk el, és abban nem csak ASCII karakterek vannak, akkor az más rendszereken (Linux, Mac OS, más nyelvű Windows) rosszul fog megjelenni.
+> Eme inkonzisztencia feloldására született meg az Unicode, amely egy olyan kódtábla, melyben a világ valamennyi írásjelét ábrázolhatóvá akarják tenni. Az ilyen Unicode karaktereknek is sajnos többféle ábrázolása lehetséges, legelterjedtebb azonban az UTF-8, a trükkös helytakarékossága miatt (legalábbis elsősorban latin karaktereket tartalmazó szövegek esetén). A mai Linux rendszerek is az UTF-8 karakterkódolást használják alapból, ezért érdemes nekünk is abban menteni a fájljainkat.
+
+Jöhet a fordítás, melegen ajánlom a `-Wall` kapcsoló használatát, hogy minél több potenciális hibát jelezzen a fordító:
 
     gcc -Wall -o elso elso.c
 
@@ -127,3 +133,6 @@ Majd a futtatás:
 [sublime_website]: https://www.sublimetext.com/
 [atom_website]: https://atom.io/
 [wsl_wiki]: https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
+[newline_wiki]: https://en.wikipedia.org/wiki/Newline
+[utf8_wiki]: https://hu.wikipedia.org/wiki/UTF-8
+[codepage_wiki]: https://hu.wikipedia.org/wiki/Karakterk%C3%B3dol%C3%A1s
