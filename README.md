@@ -1,4 +1,4 @@
-# C programozás Windows Subsystem for Linux segítségével
+# C/C++ programozás Windows Subsystem for Linux segítségével
 
 Ez a leírás röviden végigvezet a WSL beüzemelésén, a GCC fordító telepítésén és egy példa kód fordításán, futtatásán.
 
@@ -50,9 +50,9 @@ Ez frissíti a rendelkezésre álló programokat, azok verzióit. Minden telepí
 
 ![Csomaglisták frissítése][apt_update]
 
-Most már jöhet a tényleges telepítés:
+Most már jöhet a tényleges telepítés. Ha C++-ban is akarunk programozni, a `gcc` után egy szóközzel elválasztva soroljuk fel a `g++` fordítót is, egyébként elhagyhatjuk
 
-    sudo apt install gcc
+    sudo apt install gcc g++
     
 Az [APT][apt_wiki] ájékoztat, hogy pontosan milyen [csomagokat][package_manager_wiki] (programokat, programkönyvtárakat) fog telepíteni, és az mennyi helyet foglal majd a gépünkön. Üssünk be egy <kbd>y</kbd>-t és enter. 
 
